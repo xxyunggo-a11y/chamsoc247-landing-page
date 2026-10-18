@@ -22,9 +22,9 @@ npm run preview -- --port 4173
 
 - `src/main.jsx`: Block 1, menu, hộp thông tin và icon SVG.
 - `src/style.css`: màu sắc, bố cục responsive, wave và shape.
-- `public/images/`: minh họa SVG giữ chỗ, thay bằng ảnh thật khi được cung cấp.
+- `public/images/`: thư mục dành cho ảnh thật và logo chính thức khi được cung cấp.
 
-Logo hiện được dựng tạm bằng chữ và SVG, không phải tài sản thương hiệu chính thức. Nội dung chương trình được chép theo ảnh tham chiếu. Các nút đăng ký và tìm hiểu mở hộp thông tin; chưa kết nối dịch vụ đăng ký và chưa thu thập dữ liệu.
+Đã bỏ hình minh họa người và logo tự dựng. Các khung ảnh hiện để trống; tên thương hiệu hiển thị bằng chữ trong khi chờ file logo chính thức. Nội dung chương trình được chép theo ảnh tham chiếu. Các nút đăng ký và tìm hiểu mở hộp thông tin; chưa kết nối dịch vụ đăng ký và chưa thu thập dữ liệu.
 
 ## Triển khai Vercel bằng trình duyệt
 
