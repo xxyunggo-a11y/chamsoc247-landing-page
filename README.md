@@ -37,3 +37,13 @@ npm run preview -- --port 4173
 5. Chọn **Deploy**. Khi hoàn tất, mở địa chỉ `.vercel.app` do Vercel cung cấp.
 
 Những lần đẩy commit tiếp theo lên nhánh `main` sẽ tự triển khai lại nếu tích hợp GitHub vẫn được bật.
+
+## Bố cục Block 1
+
+Trang phủ toàn bộ viewport; mỗi phần nội dung có `width: 100%`, giới hạn `max-width: 1440px`, với padding responsive. `body` và `#root` không đặt chiều rộng cố định hay giới hạn max-width. Nền và wave phủ toàn màn hình.
+
+- Desktop trên 1100px: hero và phần kết nối dùng CSS Grid hai cột; hai thẻ nhu cầu bằng nhau; bốn thẻ thông tin trên một hàng.
+- Tablet 701–1100px: giữ hai cột, điều chỉnh typography, khoảng cách và crop ảnh.
+- Mobile đến 700px: các phần chính xếp dọc, thông tin nhanh chia hai cột.
+
+Đã kiểm tra bản production bằng Chromium tại 1440, 1024, 768 và 390px: chiều rộng container bằng viewport ở cả bốn mức, không tràn ngang, ảnh tải đầy đủ, menu và hộp thông tin hoạt động.

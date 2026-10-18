@@ -1,312 +1,367 @@
 @import "tailwindcss";
+
 :root {
   font-family: Arial, Helvetica, sans-serif;
   color: #07143f;
-  background: #f6eee5;
+  background: #fffcf7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  --ink: #07143f;
+  --body: #293955;
+  --gutter: clamp(24px, 4vw, 56px);
+  --content-width: 1440px;
 }
 * {
   box-sizing: border-box;
 }
+html {
+  width: 100%;
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
 body {
+  display: block;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
   margin: 0;
+  padding: 0;
+}
+#root {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 button,
-a,
-summary {
+a {
   -webkit-tap-highlight-color: transparent;
 }
 button {
-  cursor: pointer;
   font: inherit;
+  cursor: pointer;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid #185bc3;
   outline-offset: 5px;
 }
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 24px;
+img {
+  display: block;
+  max-width: 100%;
 }
 .landing {
-  max-width: 1440px;
-  margin: auto;
-  background:
-    radial-gradient(ellipse at 100% 10%, #ffead7 0, transparent 35%),
-    radial-gradient(ellipse at 0 85%, #ffede1, transparent 35%), #fffcf7;
   position: relative;
-  overflow: hidden;
+  isolation: isolate;
+  display: block;
+  width: 100%;
+  max-width: none;
+  overflow: clip;
+  background:
+    radial-gradient(ellipse at 100% 10%, #ffe6d0 0, transparent 36%),
+    radial-gradient(ellipse at 0 85%, #fff0e4, transparent 35%), #fffcf7;
+}
+.header,
+.hero,
+.needs,
+.connection,
+.program,
+.actions,
+.facts,
+.draft-note {
+  width: 100%;
+  max-width: var(--content-width);
+  min-width: 0;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 .header {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: flex;
   align-items: center;
-  gap: 26px;
-  padding: 25px 48px;
+  gap: 30px;
+  padding-block: 20px;
+  min-height: 136px;
 }
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   flex-shrink: 0;
-}
-.brand strong {
-  font-size: 32px;
-  line-height: 1.1;
-  letter-spacing: -1.4px;
-  color: #552b29;
-}
-.brand strong span {
-  color: #ff6c38;
-}
-.brand small {
   display: block;
-  font-size: 12px;
-  color: #5e6171;
-  letter-spacing: 0.15px;
-  margin-top: 4px;
+}
+.brand-logo {
+  width: 238px;
+  height: 112px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .partner-divider {
-  font-size: 29px;
-  font-weight: 200;
-  color: #586174;
+  font-size: 32px;
+  font-weight: 300;
+  color: #536079;
 }
 .partner {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
+}
+.university-logo {
+  width: 68px;
+  height: 84px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
 }
 .partner strong {
   display: block;
-  font-size: 18px;
-  white-space: nowrap;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 800;
 }
 .partner small {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 1.4;
   letter-spacing: 0.5px;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 .menu-button {
+  flex-shrink: 0;
   margin-left: auto;
   display: grid;
   place-items: center;
+  width: 76px;
+  height: 66px;
   border: 0;
   border-radius: 40px;
-  background: #ffffffb3;
-  width: 65px;
-  height: 56px;
-  color: #394258;
+  background: #fffaf3e8;
+  color: #34425b;
+}
+.menu-button svg {
+  width: 32px;
+  height: 32px;
 }
 .navigation {
   position: absolute;
-  right: 48px;
-  top: 95px;
-  background: #fff;
+  top: calc(100% - 8px);
+  right: var(--gutter);
+  min-width: 270px;
+  padding: 12px;
+  display: grid;
+  background: #fffaf4;
   border: 1px solid #f8ded0;
   border-radius: 20px;
   box-shadow: 0 15px 40px #5c301c20;
-  padding: 12px;
-  display: grid;
-  min-width: 240px;
 }
 .navigation a,
 .navigation button {
-  padding: 14px;
+  padding: 16px;
   text-align: left;
   border: 0;
-  border-radius: 10px;
   background: transparent;
+  border-radius: 10px;
 }
 .navigation a:hover,
 .navigation button:hover {
-  background: #fff0e5;
+  background: #ffecdd;
 }
 .hero {
   position: relative;
-  padding: 22px 48px 20px;
-  min-height: 520px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
+  gap: 0;
+  padding-block: 22px 28px;
 }
 .hero-copy {
   position: relative;
   z-index: 2;
-  width: 58%;
-  pointer-events: none;
-}
-.hero-copy > * {
-  pointer-events: auto;
+  min-width: 0;
+  padding-block: 12px 0;
 }
 .eyebrow {
   display: inline-block;
-  border-radius: 40px;
-  background: linear-gradient(110deg, #ffe8c9, #ffdcd1);
-  color: #ed5c38;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
+  max-width: 100%;
   padding: 12px 24px;
-  margin: 0 0 20px;
+  margin: 0 0 24px;
+  border-radius: 40px;
+  background: linear-gradient(110deg, #ffe7c7, #ffd9cf);
+  color: #f65e36;
+  font-size: clamp(14px, 1.4vw, 20px);
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 .hero h1 {
-  font-size: clamp(44px, 5.4vw, 72px);
-  font-weight: 750;
-  line-height: 1.08;
-  letter-spacing: -2.6px;
   margin: 0;
+  font-size: clamp(48px, 5.3vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 800;
 }
 .gradient-text {
-  color: #f94c38;
-  background: linear-gradient(100deg, #ff7430 0%, #ff174f 70%, #ff602f);
+  color: #fa4c3e;
+  background: linear-gradient(105deg, #ff7435, #ff234f 68%, #ff6339);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .intro {
-  font-size: 23px;
-  line-height: 1.4;
-  max-width: 610px;
-  margin: 22px 0 0;
-  color: #182548;
+  max-width: 660px;
+  margin: 25px 0 0;
+  color: var(--body);
+  font-size: clamp(23px, 2.15vw, 30px);
+  line-height: 1.44;
 }
 .hero-visual {
-  position: absolute;
-  right: 0;
-  top: -105px;
-  width: 53%;
-  height: 650px;
+  position: relative;
+  align-self: stretch;
+  min-height: 660px;
+  margin: -162px calc(-1 * var(--gutter)) 0 -30px;
   isolation: isolate;
 }
-.hero-visual img {
+.hero-photo-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  clip-path: url(#hero-photo-shape);
+}
+.hero-photo-frame img {
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
-  clip-path: url(#hero-photo-shape);
+  object-position: 55% 43%;
 }
 .handwritten {
   font-family: "Segoe Print", "Bradley Hand", cursive;
   font-style: italic;
-  font-size: 26px;
+  font-size: 29px;
   line-height: 1.2;
   color: #743f35;
   transform: rotate(-8deg);
-}
-.hero-visual .handwritten {
-  position: absolute;
-  bottom: 0;
-  right: 24px;
-  text-align: center;
-  background: #fff7eddd;
-  border-radius: 50%;
-  padding: 18px 30px;
 }
 .handwritten span {
   color: #ff6973;
 }
 .handwritten small {
-  font-size: 20px;
+  font-size: 23px;
+}
+.hero-visual .handwritten {
+  position: absolute;
+  bottom: -8px;
+  right: 26px;
+  padding: 20px 32px;
+  text-align: center;
+  border-radius: 51% 49% 44% 56%;
+  background: #fff7edee;
 }
 .handwritten svg {
-  width: 150px;
+  width: 170px;
   fill: none;
   stroke: #ff6b71;
   stroke-width: 2;
   margin: 6px 0 0 20px;
 }
 .needs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 20px 48px 0;
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding-top: 16px;
 }
 .need-card {
-  border-radius: 38px 38px 55px 55px;
+  min-width: 0;
+  border-radius: 42px 42px 64px 64px;
   overflow: hidden;
 }
 .women {
-  background: linear-gradient(#fff4e8, #fff0e3);
+  background: linear-gradient(#fff4e8, #ffefe1);
 }
 .families {
   background: linear-gradient(#fff3e9, #ffedf0);
 }
 .card-photo {
-  height: 290px;
-  border-radius: 38px 38px 45% 12% / 38px 38px 9% 9%;
+  width: 100%;
+  aspect-ratio: 1.76;
   overflow: hidden;
+  clip-path: url(#card-photo-shape);
 }
 .card-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 43%;
+}
+.women .card-photo img {
+  object-position: 50% 8%;
 }
 .families .card-photo img {
-  object-position: center 40%;
+  object-position: 50% 35%;
 }
 .card-content {
   position: relative;
-  padding: 28px 30px 34px;
+  padding: 32px 34px 38px;
 }
 .round-icon {
   position: absolute;
-  top: -57px;
-  left: 20px;
-  width: 78px;
-  height: 78px;
-  border: 7px solid #fff8f0;
-  border-radius: 50%;
+  top: -65px;
+  left: 22px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #ffc078, #ff7139);
-  color: white;
+  width: 92px;
+  height: 92px;
+  border: 8px solid #fff8f0;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #ffbf7b, #ff733a);
   box-shadow: 0 -6px 0 4px #ffffff85;
 }
 .round-icon svg {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
 }
 .families .round-icon {
-  background: linear-gradient(135deg, #ffb7c9, #ff4c7b);
+  background: linear-gradient(135deg, #ffb6c8, #ff4d7c);
 }
 .card-content h2 {
-  font-size: 28px;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  margin: 3px 0 14px;
-  font-weight: 750;
+  margin: 0 0 16px;
+  font-size: clamp(28px, 2.4vw, 34px);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  font-weight: 800;
 }
 .card-content p {
-  font-size: 20px;
-  line-height: 1.45;
   margin: 0;
-  color: #34415b;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.45;
+  color: var(--body);
 }
 .connection {
-  height: 115px;
+  height: 136px;
+  padding: 0;
   margin-top: -6px;
 }
 .connection svg {
-  height: 100%;
   width: 100%;
+  height: 100%;
   overflow: visible;
 }
 .wave-soft,
 .wave-thin {
   fill: none;
-  stroke: #ffe2cb;
+  stroke: #ffdfc5;
   stroke-width: 20;
-  opacity: 0.7;
+  opacity: 0.55;
 }
 .wave-thin {
-  stroke-width: 9;
-  opacity: 0.4;
+  stroke-width: 10;
+  opacity: 0.3;
 }
 .connecting-arrow {
   fill: none;
@@ -317,121 +372,138 @@ html {
 }
 .program {
   position: relative;
-  padding: 0 48px;
-  min-height: 390px;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 0;
+  align-items: start;
 }
 .program-copy {
   position: relative;
+  min-width: 0;
   z-index: 2;
-  width: 70%;
 }
 .program h2 {
-  font-size: clamp(36px, 4.3vw, 55px);
-  font-weight: 750;
-  letter-spacing: -1.8px;
+  width: 112%;
+  margin: 0 0 22px;
+  font-size: clamp(40px, 4.4vw, 63px);
   line-height: 1.12;
-  margin: 4px 0 16px;
+  letter-spacing: -0.045em;
+  font-weight: 800;
 }
 .program-copy > p {
-  font-size: 22px;
-  line-height: 1.45;
-  max-width: 650px;
+  max-width: 97%;
   margin: 0;
-  color: #42506a;
+  font-size: clamp(23px, 2.1vw, 30px);
+  line-height: 1.44;
+  color: var(--body);
 }
 .program-visual {
+  position: relative;
+  min-height: 540px;
+  margin: -24px calc(-1 * var(--gutter)) 0 0;
+  isolation: isolate;
+}
+.program-visual::before {
+  content: "";
   position: absolute;
-  right: -48px;
-  top: -35px;
-  width: 43%;
-  height: 440px;
+  inset: -54px -25px -3px 20px;
+  border: 14px solid #ffb16e;
+  border-left-color: transparent;
+  border-bottom-color: #ffb3a4;
+  border-radius: 55% 45% 43% 57%;
+  transform: rotate(18deg);
+  z-index: -1;
 }
 .photo-orbit {
-  height: 100%;
+  position: absolute;
+  inset: 0;
   clip-path: url(#program-photo-shape);
-  padding: 0;
-  background: transparent;
   overflow: hidden;
 }
 .photo-orbit img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
+  object-position: 50% 35%;
 }
 .quote {
   position: absolute;
-  right: 15px;
-  top: -35px;
-  background: #fff4e6;
-  border-radius: 50%;
-  padding: 20px 25px;
+  top: -38px;
+  right: 4px;
+  padding: 24px 30px;
+  margin: 0;
   text-align: center;
-  font-size: 23px;
+  font-size: 27px;
+  border-radius: 52% 48% 35% 65% / 43% 50% 50% 57%;
+  background: #fff4e6;
 }
 .scholarship {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 24px;
-  border-radius: 26px;
+  width: 112%;
+  padding: 24px 28px;
+  margin-top: 26px;
+  border-radius: 28px;
   background: linear-gradient(100deg, #ffedc9, #ffefd5);
-  padding: 22px 28px;
-  margin-top: 20px;
-  max-width: 760px;
 }
 .scholarship > svg {
-  color: #ff7337;
-  width: 65px;
-  height: 65px;
   flex-shrink: 0;
+  color: #ff7438;
+  width: 76px;
+  height: 76px;
 }
 .scholarship h3 {
-  font-size: 25px;
-  font-weight: 750;
-  margin: 0 0 5px;
-  letter-spacing: -0.6px;
+  margin: 0 0 6px;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.035em;
 }
 .scholarship h3 span {
   color: #ff4b30;
 }
 .scholarship p {
-  font-size: 22px;
   margin: 0;
-  line-height: 1.3;
+  font-size: clamp(21px, 1.95vw, 28px);
+  line-height: 1.35;
 }
 .actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
   position: relative;
   z-index: 2;
-  padding: 24px 48px 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding-block: 30px 22px;
 }
 .cta {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  min-height: 82px;
-  padding: 18px 25px;
+  gap: 22px;
+  min-height: 92px;
+  padding: 20px 24px;
   border-radius: 60px;
-  font-size: 25px;
+  border: 2px solid #ff5938;
+  font-size: clamp(23px, 2.3vw, 33px);
+  line-height: 1.2;
   font-weight: 700;
-  border: 1.5px solid #ff5938;
 }
 .cta svg {
   flex-shrink: 0;
-  width: 33px;
-  height: 33px;
+  width: 36px;
+  height: 36px;
 }
 .primary {
-  background: linear-gradient(110deg, #ffa021, #ff573d 50%, #f52d76);
   color: white;
-  border-color: #fff;
+  background: linear-gradient(110deg, #ffa021, #ff573d 50%, #f52d76);
+  border-color: white;
 }
 .secondary {
-  background: #fff8f0;
   color: #fa2854;
+  background: #fff8f0;
 }
 .secondary > svg {
   color: #ff6335;
@@ -441,38 +513,39 @@ html {
   box-shadow: 0 8px 22px #ed795126;
 }
 .facts {
-  padding: 0 48px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
 }
 .fact {
-  border-radius: 28px;
-  padding: 22px 16px;
-  text-align: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 26px 18px;
+  border-radius: 30px;
+  text-align: center;
 }
 .fact > svg {
-  width: 42px;
-  height: 42px;
-  margin-bottom: 12px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
 }
 .fact h3 {
+  margin: 0 0 10px;
   white-space: pre-line;
-  font-size: 20px;
+  font-size: clamp(21px, 1.9vw, 27px);
   line-height: 1.2;
-  font-weight: 750;
-  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
 }
 .fact p {
-  font-size: 17px;
-  line-height: 1.4;
   margin: 0;
-  color: #34415b;
+  color: var(--body);
+  font-size: clamp(18px, 1.65vw, 23px);
+  line-height: 1.4;
 }
 .calendar {
   background: #fce7ed;
@@ -499,20 +572,26 @@ html {
   color: #699963;
 }
 .draft-note {
-  text-align: center;
-  font-size: 12px;
-  color: #776c65;
-  padding: 22px 28px 44px;
   position: relative;
   z-index: 2;
-  margin: 0;
+  text-align: center;
+  margin-block: 0;
+  padding-block: 26px 48px;
+  color: #776c65;
+  font-size: 12px;
 }
 .bottom-wave {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 150px;
+  height: 180px;
   pointer-events: none;
+}
+.shape-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .skip-link {
   position: fixed;
@@ -528,146 +607,262 @@ html {
 .info-dialog[open] {
   position: fixed;
   inset: 0;
+  display: grid;
+  place-items: center;
   width: 100%;
   height: 100%;
   max-width: none;
   max-height: none;
   margin: 0;
-  border: 0;
   padding: 24px;
+  border: 0;
   background: #0a143b88;
   z-index: 30;
-  display: grid;
-  place-items: center;
 }
 .dialog-box {
   position: relative;
-  background: #fffaf2;
-  border-radius: 28px;
-  padding: 36px;
   width: min(100%, 550px);
+  padding: 36px;
+  border-radius: 28px;
+  background: #fffaf2;
   box-shadow: 0 20px 90px #09122c33;
 }
 .dialog-close {
   position: absolute;
-  right: 15px;
   top: 15px;
+  right: 15px;
+  padding: 8px;
   border: 0;
   background: transparent;
-  padding: 8px;
 }
 .dialog-box .eyebrow {
   font-size: 12px;
   margin-top: 20px;
 }
 .dialog-box h2 {
+  margin: 0 0 20px;
   font-size: 30px;
   font-weight: 700;
-  margin: 0 0 20px;
 }
 .dialog-box p:not(.eyebrow) {
   font-size: 18px;
   line-height: 1.6;
-  color: #42506a;
+  color: var(--body);
 }
 .dialog-box .cta {
-  font-size: 18px;
+  width: 100%;
   min-height: 54px;
   margin-top: 24px;
-  width: 100%;
+  font-size: 18px;
 }
-@media (min-width: 1200px) {
-  .hero {
-    min-height: 600px;
-    padding-top: 45px;
+
+/* Tablet landscape: retain two large columns without desktop-sized overflow. */
+@media (min-width: 701px) and (max-width: 1100px) {
+  :root {
+    --gutter: 32px;
   }
-  .hero-visual {
-    height: 730px;
-  }
-  .intro {
-    max-width: 640px;
-  }
-  .card-photo {
-    height: 340px;
-  }
-  .program {
-    min-height: 440px;
-  }
-  .program-visual {
-    height: 490px;
-  }
-  .program-copy > p {
-    max-width: 740px;
-  }
-  .scholarship {
-    margin-top: 28px;
-  }
-}
-@media (max-width: 1000px) and (min-width: 701px) {
   .header {
-    gap: 16px;
-    padding: 20px 32px;
+    min-height: 115px;
+    gap: 22px;
+    padding-block: 16px;
   }
-  .brand strong {
-    font-size: 27px;
+  .brand-logo {
+    width: 190px;
+    height: 90px;
   }
-  .brand svg {
-    width: 56px;
+  .university-logo {
+    width: 53px;
+    height: 65px;
+  }
+  .partner {
+    gap: 12px;
   }
   .partner strong {
-    font-size: 15px;
+    font-size: 17px;
+  }
+  .partner small {
+    font-size: 10px;
+  }
+  .menu-button {
+    width: 62px;
+    height: 56px;
   }
   .hero {
-    padding: 20px 32px;
-    min-height: 450px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    padding-top: 16px;
   }
   .hero h1 {
-    font-size: 53px;
-  }
-  .hero-copy {
-    width: 60%;
-  }
-  .eyebrow {
-    font-size: 12px;
-    padding: 10px 17px;
-  }
-  .intro {
-    font-size: 20px;
+    font-size: clamp(43px, 5.5vw, 59px);
   }
   .hero-visual {
-    height: 570px;
+    min-height: 580px;
+    margin-top: -130px;
+    margin-left: -20px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    padding: 11px 16px;
+    margin-bottom: 20px;
+  }
+  .intro {
+    font-size: 23px;
+    line-height: 1.45;
+  }
+  .hero-visual .handwritten {
+    right: 10px;
+    padding: 16px 22px;
+    font-size: 24px;
+  }
+  .handwritten small {
+    font-size: 20px;
   }
   .needs {
-    padding: 15px 32px 0;
-    gap: 20px;
-  }
-  .card-photo {
-    height: 250px;
+    gap: 22px;
   }
   .card-content {
-    padding: 28px 24px;
+    padding: 30px 26px 34px;
   }
   .card-content h2 {
-    font-size: 25px;
+    font-size: 29px;
   }
   .card-content p {
-    font-size: 18px;
+    font-size: 22px;
+  }
+  .round-icon {
+    width: 78px;
+    height: 78px;
+    top: -54px;
+    border-width: 7px;
+  }
+  .round-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  .connection {
+    height: 115px;
   }
   .program {
-    padding: 0 32px;
-  }
-  .program-copy {
-    width: 72%;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   }
   .program h2 {
-    font-size: 40px;
+    font-size: clamp(38px, 4.5vw, 48px);
   }
   .program-copy > p {
-    font-size: 19px;
-    max-width: 480px;
+    font-size: 23px;
+  }
+  .program-visual {
+    min-height: 480px;
+    margin-top: 6px;
+  }
+  .quote {
+    font-size: 23px;
+    padding: 20px 24px;
+    right: 0;
+    top: -25px;
   }
   .scholarship {
+    gap: 18px;
+    padding: 22px;
+  }
+  .scholarship > svg {
+    width: 58px;
+    height: 58px;
+  }
+  .scholarship h3 {
+    font-size: 25px;
+  }
+  .scholarship p {
+    font-size: 22px;
+  }
+  .cta {
+    font-size: 25px;
+    gap: 16px;
+    min-height: 82px;
+  }
+  .cta svg {
+    width: 30px;
+    height: 30px;
+  }
+  .fact {
+    padding: 24px 14px;
+  }
+  .fact h3 {
+    font-size: 21px;
+  }
+  .fact p {
+    font-size: 18px;
+  }
+}
+/* Tablet portrait: keep the reference's two-column composition, adapt type and photo crops. */
+@media (min-width: 701px) and (max-width: 850px) {
+  :root {
+    --gutter: 28px;
+  }
+  .header {
     gap: 15px;
+  }
+  .brand-logo {
+    width: 166px;
+    height: 84px;
+  }
+  .partner strong {
+    font-size: 14px;
+  }
+  .partner small {
+    font-size: 8px;
+  }
+  .hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+  .hero h1 {
+    font-size: 43px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    padding: 10px 13px;
+  }
+  .intro {
+    font-size: 21px;
+  }
+  .hero-visual {
+    min-height: 580px;
+  }
+  .hero-photo-frame img {
+    object-position: 66% 45%;
+  }
+  .hero-visual .handwritten {
+    right: 4px;
+    font-size: 22px;
+    padding: 12px 18px;
+  }
+  .handwritten small {
+    font-size: 18px;
+  }
+  .card-content {
+    padding: 28px 22px 30px;
+  }
+  .card-content h2 {
+    font-size: 26px;
+  }
+  .card-content p {
+    font-size: 20px;
+  }
+  .program h2 {
+    font-size: 37px;
+  }
+  .program-copy > p {
+    font-size: 21px;
+  }
+  .program-visual {
+    min-height: 430px;
+    margin-top: 35px;
+  }
+  .quote {
+    font-size: 20px;
+    padding: 18px;
+  }
+  .scholarship {
+    gap: 12px;
     padding: 18px;
   }
   .scholarship h3 {
@@ -676,256 +871,252 @@ html {
   .scholarship p {
     font-size: 19px;
   }
-  .program-visual {
-    width: 44%;
-    height: 390px;
-    right: -60px;
+  .scholarship > svg {
+    width: 47px;
+    height: 47px;
   }
-  .quote {
-    font-size: 19px;
-  }
-  .actions,
-  .facts {
-    padding-left: 32px;
-    padding-right: 32px;
+  .actions {
+    gap: 16px;
   }
   .cta {
     font-size: 22px;
+    padding: 18px;
+    gap: 12px;
+  }
+  .facts {
     gap: 14px;
   }
   .fact {
-    padding: 18px 10px;
+    padding: 22px 10px;
   }
   .fact h3 {
-    font-size: 17px;
+    font-size: 18px;
   }
   .fact p {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
+/* Mobile is intentionally stacked; desktop and tablet do not inherit this layout. */
 @media (max-width: 700px) {
+  :root {
+    --gutter: 20px;
+  }
   .header {
-    padding: 18px 20px;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 104px;
+    padding-block: 14px;
   }
-  .brand {
-    gap: 5px;
-  }
-  .brand svg {
-    width: 43px;
-    height: 46px;
-  }
-  .brand strong {
-    font-size: 24px;
-    letter-spacing: -1px;
-  }
-  .brand small {
-    font-size: 9px;
+  .brand-logo {
+    width: 144px;
+    height: 78px;
   }
   .partner-divider {
     display: none;
   }
   .partner {
-    order: 3;
-    width: 100%;
-    gap: 8px;
-    padding-left: 6px;
+    gap: 7px;
+  }
+  .university-logo {
+    width: 35px;
+    height: 44px;
   }
   .partner strong {
-    font-size: 12px;
+    font-size: 10px;
   }
   .partner small {
-    font-size: 8px;
+    font-size: 6px;
+  }
+  .partner span {
+    max-width: 88px;
   }
   .menu-button {
-    width: 48px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
   }
   .menu-button svg {
-    width: 24px;
-  }
-  .navigation {
-    top: 75px;
-    right: 20px;
+    width: 25px;
+    height: 25px;
   }
   .hero {
-    padding: 18px 20px 0;
-    min-height: 0;
     display: flex;
     flex-direction: column;
+    gap: 0;
+    padding-top: 12px;
+    padding-bottom: 0;
   }
   .hero-copy {
-    width: 100%;
+    padding-top: 0;
   }
   .eyebrow {
-    font-size: 10px;
+    font-size: 11px;
     padding: 10px 13px;
-    letter-spacing: 0.2px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .hero h1 {
-    font-size: clamp(37px, 9.2vw, 60px);
-    letter-spacing: -1.7px;
-    line-height: 1.12;
+    font-size: clamp(37px, 9.4vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.045em;
   }
   .desktop-break {
     display: none;
   }
   .intro {
-    font-size: 18px;
+    max-width: none;
+    font-size: 20px;
     line-height: 1.5;
-    margin-top: 18px;
-    max-width: 100%;
-  }
-  .hero-visual {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: 100%;
-    height: 350px;
     margin-top: 22px;
   }
-  .hero-visual img {
-    clip-path: url(#hero-photo-shape);
-    object-position: center 42%;
+  .hero-visual {
+    align-self: auto;
+    min-height: 0;
+    width: 100%;
+    aspect-ratio: 1.08;
+    margin: 26px 0 12px;
+  }
+  .hero-photo-frame img {
+    object-position: 50% 42%;
   }
   .hero-visual .handwritten {
-    font-size: 22px;
-    right: -5px;
-    bottom: -12px;
-    padding: 12px 18px;
+    right: -4px;
+    bottom: -8px;
+    padding: 14px 20px;
+    font-size: 23px;
   }
   .handwritten small {
-    font-size: 17px;
+    font-size: 18px;
+  }
+  .handwritten svg {
+    width: 145px;
   }
   .needs {
-    grid-template-columns: 1fr;
-    padding: 35px 20px 0;
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding-top: 28px;
   }
   .need-card {
-    border-radius: 26px 26px 36px 36px;
+    border-radius: 28px 28px 42px 42px;
   }
   .card-photo {
-    height: 230px;
-    border-radius: 26px 26px 40% 10% / 26px 26px 8% 8%;
+    aspect-ratio: 1.5;
   }
   .card-content {
-    padding: 28px 24px;
+    padding: 30px 24px 32px;
+  }
+  .card-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .card-content p {
+    font-size: 20px;
+    line-height: 1.5;
   }
   .round-icon {
-    width: 66px;
-    height: 66px;
-    top: -48px;
+    width: 70px;
+    height: 70px;
+    top: -50px;
     left: 18px;
     border-width: 6px;
   }
   .round-icon svg {
-    width: 29px;
-  }
-  .card-content h2 {
-    font-size: 25px;
-    letter-spacing: -0.7px;
-    line-height: 1.2;
-  }
-  .card-content p {
-    font-size: 17px;
-    line-height: 1.5;
+    width: 32px;
+    height: 32px;
   }
   .connection {
-    height: 75px;
-    margin-top: 6px;
+    height: 90px;
   }
   .program {
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
-  }
-  .program-copy {
-    width: 100%;
+    gap: 0;
   }
   .program h2 {
-    font-size: 34px;
-    letter-spacing: -1px;
+    width: 100%;
+    font-size: clamp(34px, 8.6vw, 48px);
+    line-height: 1.13;
   }
   .program-copy > p {
-    font-size: 18px;
+    max-width: 100%;
+    font-size: 20px;
     line-height: 1.5;
   }
   .scholarship {
-    padding: 18px 16px;
-    gap: 13px;
-    border-radius: 22px;
-    margin-top: 22px;
+    width: 100%;
+    padding: 20px 16px;
+    gap: 14px;
+    border-radius: 24px;
   }
   .scholarship > svg {
-    width: 43px;
-    height: 43px;
+    width: 46px;
+    height: 46px;
   }
   .scholarship h3 {
-    font-size: 20px;
-    line-height: 1.25;
-    letter-spacing: -0.4px;
+    font-size: 22px;
   }
   .scholarship h3 span {
     display: block;
   }
   .scholarship p {
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 18px;
   }
   .program-visual {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 90%;
-    height: 330px;
-    margin: 32px auto 4px;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1.02;
+    margin: 50px 0 12px;
+  }
+  .program-visual::before {
+    inset: -24px -14px -4px 10px;
+    border-width: 9px;
+  }
+  .photo-orbit img {
+    object-position: 50% 35%;
   }
   .quote {
-    right: -24px;
-    top: 0;
-    font-size: 19px;
-    padding: 17px;
+    font-size: 21px;
+    padding: 18px 22px;
+    top: -22px;
+    right: -8px;
   }
   .actions {
-    grid-template-columns: 1fr;
-    padding: 22px 20px 18px;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding-top: 26px;
+    padding-bottom: 18px;
   }
   .cta {
-    min-height: 64px;
-    font-size: 21px;
-    gap: 18px;
-    padding: 15px 20px;
+    min-height: 70px;
+    padding: 16px 20px;
+    font-size: 22px;
+    gap: 16px;
   }
   .cta svg {
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
   }
   .facts {
-    padding: 0 20px;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
   }
   .fact {
-    border-radius: 22px;
-    padding: 20px 12px;
+    padding: 24px 12px;
+    border-radius: 24px;
   }
   .fact > svg {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
   .fact h3 {
-    font-size: 17px;
+    font-size: 19px;
   }
   .fact p {
-    font-size: 15px;
+    font-size: 17px;
   }
   .draft-note {
     font-size: 11px;
-    padding-top: 22px;
+    padding-block: 24px 40px;
+  }
+  .bottom-wave {
+    height: 130px;
   }
   .dialog-box {
     padding: 28px 22px;
@@ -934,407 +1125,12 @@ html {
     font-size: 25px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+@media (max-width: 380px) {
+  .brand-logo {
+    width: 128px;
   }
-}
-
-/* Reference proportions and fluid type; actual photography is pending. */
-:root {
-  --ink: #07143f;
-  --body: #283653;
-  --gutter: clamp(20px, 4vw, 52px);
-}
-.shape-definitions {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.header {
-  padding-inline: var(--gutter);
-  padding-block: 28px;
-  gap: clamp(14px, 2.4vw, 32px);
-}
-.hero {
-  padding-inline: var(--gutter);
-  min-height: clamp(530px, 48vw, 660px);
-}
-.hero-copy {
-  width: 57%;
-}
-.hero h1 {
-  font-size: clamp(48px, 5.55vw, 76px);
-  line-height: 1.08;
-  letter-spacing: -0.045em;
-  font-weight: 800;
-}
-.eyebrow {
-  font-size: clamp(13px, 1.45vw, 19px);
-  line-height: 1.4;
-  margin-bottom: 22px;
-  padding: 11px 24px;
-}
-.intro {
-  font-size: clamp(23px, 2.08vw, 28px);
-  line-height: 1.48;
-  margin-top: 24px;
-  max-width: 96%;
-  color: var(--body);
-}
-.hero-visual {
-  width: 49%;
-  height: calc(100% + 90px);
-  top: -100px;
-  pointer-events: none;
-}
-.hero-photo-frame {
-  position: absolute;
-  inset: 0;
-  clip-path: url(#hero-photo-shape);
-}
-.hero-visual .handwritten {
-  bottom: 5px;
-  right: 28px;
-  background: #fff8f0;
-  padding: 18px 24px;
-}
-.needs {
-  padding-inline: var(--gutter);
-  gap: 26px;
-  padding-top: 10px;
-}
-.card-photo {
-  height: auto;
-  aspect-ratio: 1.76;
-  clip-path: url(#card-photo-shape);
-  border-radius: 0;
-}
-.card-photo img {
-  height: 100%;
-  display: block;
-}
-.card-content {
-  padding: 30px 30px 36px;
-}
-.card-content h2 {
-  font-size: clamp(27px, 2.6vw, 35px);
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  margin: 0 0 16px;
-  font-weight: 800;
-}
-.card-content p {
-  font-size: clamp(21px, 1.95vw, 26px);
-  line-height: 1.48;
-  color: var(--body);
-}
-.need-card {
-  border-radius: 36px 36px 58px 58px;
-}
-.connection {
-  height: 125px;
-  margin-top: -4px;
-}
-.wave-soft {
-  stroke-width: 17;
-  opacity: 0.58;
-}
-.wave-thin {
-  stroke-width: 10;
-  opacity: 0.3;
-}
-.program {
-  padding-inline: var(--gutter);
-  min-height: 480px;
-  isolation: isolate;
-}
-.program-copy {
-  width: 70%;
-}
-.program h2 {
-  font-size: clamp(40px, 4.55vw, 62px);
-  line-height: 1.13;
-  letter-spacing: -0.04em;
-  margin: 0 0 22px;
-  font-weight: 800;
-}
-.program-copy > p {
-  font-size: clamp(22px, 2.05vw, 28px);
-  line-height: 1.5;
-  max-width: 79%;
-  color: var(--body);
-}
-.program-visual {
-  width: 43%;
-  height: 470px;
-  right: -34px;
-  top: -20px;
-  z-index: -1;
-}
-.program-visual::before {
-  content: "";
-  position: absolute;
-  inset: -40px -35px -8px 12px;
-  border: 12px solid #ffb274;
-  border-left-color: transparent;
-  border-bottom-color: #ffb5a3;
-  border-radius: 55% 45% 43% 57%;
-  transform: rotate(16deg);
-  z-index: -1;
-}
-.photo-orbit {
-  clip-path: url(#program-photo-shape);
-}
-.quote {
-  right: 10px;
-  top: -20px;
-  font-size: 25px;
-  padding: 22px 26px;
-  border-radius: 52% 48% 35% 65% / 43% 50% 50% 57%;
-}
-.scholarship {
-  max-width: 100%;
-  padding: 22px 26px;
-  margin-top: 24px;
-  gap: 22px;
-}
-.scholarship h3 {
-  font-size: clamp(24px, 2.3vw, 31px);
-  line-height: 1.25;
-}
-.scholarship p {
-  font-size: clamp(21px, 1.95vw, 26px);
-  line-height: 1.4;
-}
-.actions {
-  padding: 28px var(--gutter) 20px;
-  gap: 20px;
-}
-.cta {
-  font-size: clamp(22px, 2.25vw, 30px);
-  min-height: 86px;
-  gap: 22px;
-}
-.facts {
-  padding-inline: var(--gutter);
-  gap: 20px;
-}
-.fact {
-  padding: 24px 16px 26px;
-}
-.fact h3 {
-  font-size: clamp(19px, 1.85vw, 25px);
-  line-height: 1.25;
-}
-.fact p {
-  font-size: clamp(18px, 1.65vw, 22px);
-  line-height: 1.4;
-}
-@media (min-width: 701px) and (max-width: 1000px) {
-  .hero {
-    min-height: 520px;
-  }
-  .hero h1 {
-    font-size: clamp(43px, 5.5vw, 55px);
-  }
-  .hero-copy {
-    width: 60%;
-  }
-  .intro {
-    font-size: 22px;
-  }
-  .hero-visual {
-    width: 48%;
-  }
-  .eyebrow {
-    font-size: 12px;
-    padding-inline: 16px;
-  }
-  .program {
-    min-height: 470px;
-  }
-  .program-copy {
-    width: 74%;
-  }
-  .program-copy > p {
-    max-width: 82%;
-    font-size: 22px;
-  }
-  .program h2 {
-    font-size: 43px;
-  }
-  .program-visual {
-    width: 41%;
-    height: 420px;
-    right: -45px;
-  }
-  .quote {
-    font-size: 20px;
-  }
-  .scholarship {
-    padding: 20px;
-    gap: 14px;
-  }
-  .scholarship h3 {
-    font-size: 23px;
-  }
-  .scholarship p {
-    font-size: 21px;
-  }
-  .cta {
-    font-size: 23px;
-    gap: 14px;
-  }
-  .fact {
-    padding: 22px 12px;
-  }
-  .fact h3 {
-    font-size: 19px;
-  }
-  .fact p {
-    font-size: 17px;
-  }
-}
-@media (max-width: 700px) {
-  .header {
-    padding-block: 20px;
-    gap: 12px;
-  }
-  .hero {
-    min-height: 0;
-    padding-top: 16px;
-  }
-  .hero-copy {
-    width: 100%;
-  }
-  .hero h1 {
-    font-size: clamp(39px, 9.5vw, 62px);
-    line-height: 1.1;
-    letter-spacing: -0.045em;
-  }
-  .eyebrow {
-    font-size: 11px;
-    line-height: 1.4;
-    padding: 10px 13px;
-    margin-bottom: 20px;
-  }
-  .intro {
-    font-size: 20px;
-    line-height: 1.55;
-    margin-top: 22px;
-    max-width: 100%;
-  }
-  .hero-visual {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1.12;
-    top: auto;
-    margin: 24px 0 8px;
-  }
-  .hero-visual .handwritten {
-    bottom: 0;
-    right: 0;
-    padding: 12px 20px;
-  }
-  .needs {
-    padding-top: 26px;
-    gap: 28px;
-  }
-  .card-photo {
-    aspect-ratio: 1.5;
-    height: auto;
-  }
-  .card-content {
-    padding: 30px 24px 32px;
-  }
-  .card-content h2 {
-    font-size: 28px;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-  .card-content p {
-    font-size: 20px;
-    line-height: 1.5;
-  }
-  .need-card {
-    border-radius: 28px 28px 40px 40px;
-  }
-  .connection {
-    height: 90px;
-  }
-  .program {
-    min-height: 0;
-  }
-  .program-copy {
-    width: 100%;
-  }
-  .program h2 {
-    font-size: clamp(34px, 8.4vw, 49px);
-    line-height: 1.15;
-    margin-bottom: 22px;
-  }
-  .program-copy > p {
-    max-width: 100%;
-    font-size: 20px;
-    line-height: 1.55;
-  }
-  .scholarship {
-    padding: 20px 16px;
-    gap: 14px;
-  }
-  .scholarship h3 {
-    font-size: 22px;
-  }
-  .scholarship p {
-    font-size: 18px;
-  }
-  .program-visual {
-    z-index: 0;
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 94%;
-    height: auto;
-    aspect-ratio: 1.1;
-    margin: 44px auto 12px;
-  }
-  .program-visual::before {
-    inset: -12px -16px 0 10px;
-    border-width: 8px;
-  }
-  .quote {
-    right: -10px;
-    top: -18px;
-    font-size: 21px;
-    padding: 18px;
-  }
-  .actions {
-    padding-top: 24px;
-    gap: 14px;
-  }
-  .cta {
-    font-size: 22px;
-    min-height: 70px;
-    gap: 16px;
-  }
-  .facts {
-    gap: 14px;
-  }
-  .fact {
-    padding: 24px 12px;
-  }
-  .fact h3 {
-    font-size: 19px;
-  }
-  .fact p {
-    font-size: 17px;
-  }
-}
-@media (max-width: 360px) {
-  .brand strong {
-    font-size: 22px;
+  .partner span {
+    display: none;
   }
   .hero h1 {
     font-size: 35px;
@@ -1342,119 +1138,15 @@ html {
   .eyebrow {
     font-size: 10px;
   }
-  .fact h3 {
-    font-size: 17px;
-  }
   .cta {
     font-size: 20px;
   }
-}
-
-/* Local photography: keep faces inside the curved masks at every breakpoint. */
-.hero-photo-frame {
-  overflow: hidden;
-}
-.hero-photo-frame img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 56% 42%;
-  clip-path: none;
-  border-radius: 0;
-}
-.women .card-photo img {
-  object-position: 50% 12%;
-}
-.families .card-photo img {
-  object-position: 50% 45%;
-}
-.photo-orbit img {
-  display: block;
-  object-position: 50% 38%;
-}
-@media (max-width: 700px) {
-  .hero-photo-frame img {
-    object-position: 50% 42%;
-  }
-  .photo-orbit img {
-    object-position: 50% 35%;
+  .fact h3 {
+    font-size: 17px;
   }
 }
-
-.brand-logo {
-  display: block;
-  width: 205px;
-  height: 104px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-.university-logo {
-  display: block;
-  width: 64px;
-  height: 79px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-.header {
-  padding-block: 16px;
-}
-.hero-visual {
-  top: -132px;
-  height: calc(100% + 122px);
-}
-@media (max-width: 700px) {
-  .brand-logo {
-    width: 150px;
-    height: 76px;
-  }
-  .partner {
-    width: auto;
-    order: 0;
-    gap: 8px;
-  }
-  .partner-divider {
-    display: none;
-  }
-  .university-logo {
-    width: 35px;
-    height: 44px;
-  }
-  .partner strong {
-    font-size: 10px;
-    white-space: normal;
-  }
-  .partner small {
-    font-size: 6px;
-  }
-  .partner span {
-    max-width: 100px;
-  }
-  .header {
-    gap: 10px;
-  }
-  .menu-button {
-    width: 42px;
-    height: 42px;
-  }
-  .hero-visual {
-    top: auto;
-    height: auto;
-  }
-  .navigation {
-    top: 95px;
-  }
-}
-@media (max-width: 400px) {
-  .brand-logo {
-    width: 130px;
-    height: 70px;
-  }
-  .partner span {
-    display: none;
-  }
-  .header {
-    flex-wrap: nowrap;
-    gap: 12px;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
