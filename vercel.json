@@ -1,6 +1,16 @@
 {
   "rewrites": [
-    { "source": "/design-lab", "destination": "/index.html" },
-    { "source": "/design-lab/", "destination": "/index.html" }
+    {
+      "source": "/design-lab/concept-:variant",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/design-lab",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/design-lab/",
+      "destination": "/index.html"
+    }
   ]
 }

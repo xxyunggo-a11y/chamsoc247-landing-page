@@ -1,3 +1,4 @@
+import CreativeComparison from "./CreativeComparison.jsx";
 import { useEffect, useId, useState } from "react";
 import "./design-lab.css";
 
@@ -55,14 +56,15 @@ export default function DesignLab() {
     };
   }, []);
   useEffect(() => {
-    const query = new URLSearchParams();
+    const query = new URLSearchParams(location.search);
+    ["shape", "orange", "pink", "cream"].forEach((key) => query.delete(key));
     if (selected) query.set("shape", selected);
     for (const [key, value] of Object.entries(colors))
       if (value !== defaults[key]) query.set(key, value);
     history.replaceState(
       null,
       "",
-      location.pathname + (query.size ? "?" + query : ""),
+      location.pathname + (query.size ? "?" + query : "") + location.hash,
     );
   }, [selected, colors]);
   const variables = {
@@ -112,6 +114,10 @@ export default function DesignLab() {
         </div>
         <span className="lab-status">Block 1 được giữ nguyên</span>
       </header>
+      <CreativeComparison />
+      <h2 id="shape-library" className="lab-shape-title">
+        Thư viện SVG · S01–S06
+      </h2>
       <section className="lab-toolbar" aria-label="Tùy chỉnh mẫu">
         <div className="lab-colors">
           {Object.entries(colors).map(([key, value]) => (

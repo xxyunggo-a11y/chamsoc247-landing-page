@@ -59,3 +59,9 @@ Mở `/design-lab` để so sánh 6 mẫu SVG độc lập, thử ảnh thật, 
 - `vercel.json`: rewrite cho `/design-lab` để mở trực tiếp hoặc tải lại trên Vercel.
 
 Nguồn: Haikei (quyền dùng trong dự án thương mại theo FAQ tại https://haikei.app/pricing/). SVG Backgrounds bị chặn HTTP 403; không sử dụng tài nguyên từ nguồn đó.
+
+## Creative Concept Comparison
+
+Trong `/design-lab` có khu vực so sánh Block 1 hoàn chỉnh, chạy React thật: ba phương án A/B/C, iframe xem nhanh, khung desktop 1440/mobile 390, xem toàn màn hình và lưu lựa chọn trong URL.
+
+Xem riêng tại `/design-lab/concept-a`, `/design-lab/concept-b`, `/design-lab/concept-c`. Chưa áp dụng phương án nào vào trang `/`. Xem phân tích thiết kế và cấu trúc tại [docs/creative-refinement.md](docs/creative-refinement.md).

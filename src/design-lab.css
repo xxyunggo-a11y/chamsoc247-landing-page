@@ -424,3 +424,5 @@
     transition: none;
   }
 }
+
+.lab-shape-title{font-size:25px;line-height:1.2;letter-spacing:-.03em;font-weight:700;margin:0 0 20px;scroll-margin-top:24px}

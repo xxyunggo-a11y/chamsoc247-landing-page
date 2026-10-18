@@ -1,0 +1,1005 @@
+/* Concept styles are isolated from the approved homepage. */
+.concept {
+  --concept-cream: #fffaf2;
+  --concept-pink: #f83e70;
+  --concept-orange: #ff813e;
+}
+.concept-review {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 28px;
+  border-bottom: 1px solid #eaded1;
+  background: #fffdf8;
+  font-size: 13px;
+}
+.concept-review strong {
+  font-size: 14px;
+}
+.concept-review nav {
+  display: flex;
+  gap: 8px;
+}
+.concept-review nav a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e4d7c9;
+  border-radius: 50%;
+}
+.concept-review nav a[aria-current="page"] {
+  background: #13213f;
+  color: white;
+}
+.concept-pick {
+  color: #bb5533;
+}
+.concept .hero-photo-frame,
+.concept .photo-orbit {
+  clip-path: none;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+.concept-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
+  object-fit: fill !important;
+  z-index: 3;
+  clip-path: none !important;
+}
+.concept .hero-photo-frame {
+  inset: 0;
+}
+.concept .photo-orbit {
+  inset: 0;
+}
+.concept .hero-visual .handwritten,
+.concept .quote {
+  z-index: 4;
+  background: #fff9efeb;
+}
+.concept .program-visual::before {
+  display: none;
+}
+.concept .connection {
+  position: relative;
+  height: 150px;
+  z-index: 0;
+}
+.concept .connection > svg {
+  display: none;
+}
+.concept .concept-ribbon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.concept .hero-visual .handwritten {
+  right: 8px;
+  bottom: -8px;
+  font-size: 27px;
+  max-width: 255px;
+}
+.concept .round-icon {
+  box-shadow: 0 -3px 0 4px #fff9f1;
+}
+.concept .bottom-wave {
+  opacity: 0.65;
+}
+.concept .draft-note {
+  font-size: 11px;
+}
+.concept .quote {
+  top: -18px;
+  right: 0;
+  font-size: 25px;
+  padding: 20px 25px;
+}
+.concept .hero-photo-frame img {
+  object-position: 50% 43%;
+}
+.concept .photo-orbit img {
+  object-position: 50% 37%;
+}
+/* A: editorial composition, closest to the reference. */
+.concept-a .hero-photo-frame {
+  mask-image: url("/shapes/concepts/hero-a.svg");
+}
+.concept-a .photo-orbit {
+  mask-image: url("/shapes/concepts/solution-a.svg");
+}
+.concept-a .landing {
+  background:
+    radial-gradient(ellipse at 98% 1%, #fff0df, transparent 32%), #fffaf5;
+}
+.concept-a .header {
+  min-height: 128px;
+}
+.concept-a .hero {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+.concept-a .hero h1 {
+  font-size: clamp(46px, 5.2vw, 75px);
+}
+.concept-a .hero-visual {
+  min-height: 660px;
+  margin-top: -130px;
+  margin-left: -20px;
+}
+.concept-a .hero-copy {
+  padding-top: 10px;
+}
+.concept-a .intro {
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.44;
+}
+.concept-a .needs {
+  gap: 28px;
+  padding-top: 20px;
+}
+.concept-a .card-photo {
+  aspect-ratio: 1.8;
+}
+.concept-a .card-content {
+  padding: 32px 32px 34px;
+}
+.concept-a .card-content h2 {
+  font-size: clamp(27px, 2.4vw, 34px);
+}
+.concept-a .card-content p {
+  font-size: clamp(21px, 1.9vw, 27px);
+}
+.concept-a .program {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+}
+.concept-a .program-visual {
+  min-height: 535px;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+.concept-a .program h2 {
+  font-size: clamp(39px, 4.1vw, 59px);
+}
+.concept-a .program-copy > p {
+  font-size: clamp(22px, 2vw, 28px);
+}
+/* B: photo-led opening, alternating full-width stories, reversed solution. */
+.concept-b .hero-photo-frame {
+  mask-image: url("/shapes/concepts/hero-b.svg");
+}
+.concept-b .photo-orbit {
+  mask-image: url("/shapes/concepts/solution-b.svg");
+}
+.concept-b .landing {
+  background: #fffdf8;
+}
+.concept-b .header {
+  border-bottom: 1px solid #eee2d4;
+}
+.concept-b .hero {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 60px;
+  padding-top: 60px;
+  padding-bottom: 48px;
+  align-items: center;
+}
+.concept-b .hero-copy {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 0;
+}
+.concept-b .hero-visual {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  min-height: 590px;
+}
+.concept-b .hero h1 {
+  font-size: clamp(42px, 4.7vw, 67px);
+  line-height: 1.09;
+}
+.concept-b .intro {
+  font-size: clamp(21px, 1.8vw, 26px);
+  line-height: 1.5;
+}
+.concept-b .eyebrow {
+  font-size: 14px;
+  padding: 10px 17px;
+  background: #fff0df;
+}
+.concept-b .hero-visual .handwritten {
+  bottom: -5px;
+  left: 5px;
+  right: auto;
+  transform: rotate(-5deg);
+}
+.concept-b .needs {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-block: 30px;
+}
+.concept-b .need-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  gap: 64px;
+}
+.concept-b .card-photo {
+  aspect-ratio: 1.45;
+  clip-path: none;
+  border-radius: 12px 110px 18px 100px;
+  overflow: hidden;
+}
+.concept-b .card-content {
+  padding: 40px 32px 40px 0;
+}
+.concept-b .round-icon {
+  position: static;
+  width: 72px;
+  height: 72px;
+  margin: 0 0 24px;
+  border: 0;
+  box-shadow: none;
+}
+.concept-b .card-content h2 {
+  font-size: clamp(30px, 3.15vw, 45px);
+  line-height: 1.1;
+  max-width: 500px;
+}
+.concept-b .card-content p {
+  font-size: clamp(22px, 2vw, 28px);
+  max-width: 500px;
+  line-height: 1.5;
+}
+.concept-b .families .card-photo {
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 110px 12px 100px 18px;
+}
+.concept-b .families .card-content {
+  grid-column: 1;
+  grid-row: 1;
+  padding-left: 32px;
+  padding-right: 0;
+}
+.concept-b .connection {
+  height: 170px;
+  margin-top: 5px;
+}
+.concept-b .program {
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+.concept-b .program-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+.concept-b .program-visual {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 610px;
+  margin: 0;
+}
+.concept-b .program h2 {
+  width: 100%;
+  font-size: clamp(37px, 3.8vw, 54px);
+}
+.concept-b .program-copy > p {
+  max-width: 100%;
+  font-size: clamp(21px, 1.8vw, 26px);
+  line-height: 1.5;
+}
+.concept-b .scholarship {
+  width: 100%;
+  padding: 22px;
+  gap: 18px;
+}
+.concept-b .scholarship h3 {
+  font-size: 26px;
+}
+.concept-b .scholarship p {
+  font-size: 23px;
+}
+.concept-b .scholarship > svg {
+  width: 57px;
+  height: 57px;
+}
+.concept-b .quote {
+  right: 8px;
+  top: -6px;
+}
+.concept-b .actions {
+  padding-top: 20px;
+}
+.concept-b .fact {
+  border-radius: 0;
+  background: transparent;
+  border-right: 1px solid #ead7c3;
+  padding-block: 24px;
+}
+.concept-b .fact:last-child {
+  border-right: 0;
+}
+.concept-b .facts {
+  padding-top: 18px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ead7c3;
+  border-bottom: 1px solid #ead7c3;
+  margin-top: 10px;
+}
+/* C: large editorial headline, split stage, staggered image stories. */
+.concept-c .hero-photo-frame {
+  mask-image: url("/shapes/concepts/hero-c.svg");
+}
+.concept-c .photo-orbit {
+  mask-image: url("/shapes/concepts/solution-c.svg");
+}
+.concept-c .landing {
+  background: #fff8ef;
+}
+.concept-c .header {
+  padding-block: 14px;
+  border-bottom: 1px solid #eddfcd;
+}
+.concept-c .hero {
+  display: grid;
+  grid-template-columns: 0.85fr 1.3fr;
+  column-gap: 64px;
+  padding-top: 45px;
+  padding-bottom: 42px;
+}
+.concept-c .hero-copy {
+  display: contents;
+}
+.concept-c .eyebrow {
+  grid-column: 1/-1;
+  justify-self: start;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 25px;
+  color: #a94d30;
+}
+.concept-c .hero h1 {
+  grid-column: 1/-1;
+  font-size: clamp(58px, 6.15vw, 89px);
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+  max-width: 100%;
+  margin: 0 0 38px;
+  z-index: 2;
+}
+.concept-c .hero h1 > br {
+  display: none;
+}
+.concept-c .hero h1 .gradient-text {
+  display: block;
+  color: #f45b37;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+.concept-c .desktop-break {
+  display: none;
+}
+.concept-c .intro {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: center;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.5;
+  margin: 0 0 60px;
+  position: relative;
+  z-index: 2;
+}
+.concept-c .hero-visual {
+  grid-column: 2;
+  grid-row: 3;
+  min-height: 550px;
+  margin: 0 -12px 0 -15px;
+}
+.concept-c .hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 35px -10px -18px 30px;
+  background: #f7c5b4;
+  mask-image: url("/shapes/concepts/hero-c.svg");
+  mask-size: 100% 100%;
+  transform: rotate(3deg);
+}
+.concept-c .hero-visual .handwritten {
+  bottom: 0;
+  right: 10px;
+}
+.concept-c .needs {
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 90px;
+  padding-top: 54px;
+  align-items: start;
+  padding-bottom: 0;
+}
+.concept-c .need-card {
+  background: transparent;
+  overflow: visible;
+  border-radius: 0;
+}
+.concept-c .families {
+  margin-top: 140px;
+}
+.concept-c .card-photo {
+  aspect-ratio: 1.2;
+  clip-path: none;
+  border-radius: 80px 12px 100px 16px;
+}
+.concept-c .families .card-photo {
+  aspect-ratio: 1.15;
+  border-radius: 12px 90px 18px 90px;
+}
+.concept-c .card-content {
+  padding: 32px 0 0;
+}
+.concept-c .round-icon {
+  top: -54px;
+  left: 24px;
+}
+.concept-c .card-content h2 {
+  font-size: clamp(31px, 3vw, 43px);
+  max-width: 500px;
+}
+.concept-c .card-content p {
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.5;
+}
+.concept-c .connection {
+  height: 175px;
+  margin-top: 35px;
+}
+.concept-c .program {
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding-block: 35px 25px;
+}
+.concept-c .program h2 {
+  width: 115%;
+  font-size: clamp(44px, 4.3vw, 62px);
+  margin-bottom: 28px;
+}
+.concept-c .program h2 .gradient-text {
+  background: none;
+  color: #f45b37;
+  -webkit-text-fill-color: currentColor;
+}
+.concept-c .program-copy > p {
+  font-size: clamp(21px, 1.9vw, 27px);
+  line-height: 1.5;
+}
+.concept-c .program-visual {
+  min-height: 620px;
+  margin: 5px -5px 0 0;
+}
+.concept-c .quote {
+  right: 0;
+  top: 0;
+}
+.concept-c .scholarship {
+  width: 114%;
+  margin-top: 32px;
+  border-radius: 8px 35px 8px 35px;
+  padding: 24px;
+  gap: 20px;
+}
+.concept-c .scholarship h3 {
+  font-size: 28px;
+}
+.concept-c .scholarship p {
+  font-size: 24px;
+}
+.concept-c .scholarship > svg {
+  width: 60px;
+  height: 60px;
+}
+.concept-c .cta {
+  border-radius: 12px 42px 12px 42px;
+}
+.concept-c .primary {
+  background: #f65c39;
+  border-color: #f65c39;
+}
+.concept-c .facts {
+  gap: 0;
+  padding-block: 25px;
+}
+.concept-c .fact {
+  background: transparent;
+  position: relative;
+  align-items: flex-start;
+  text-align: left;
+  border-radius: 0;
+  border-top: 2px solid #e9d5c1;
+  padding-left: 18px;
+  margin-right: 22px;
+}
+.concept-c .fact h3 {
+  font-size: 24px;
+}
+.concept-c .fact p {
+  font-size: 20px;
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .concept .quote {
+    font-size: 20px;
+    padding: 17px 20px;
+  }
+  .concept .hero-visual .handwritten {
+    font-size: 22px;
+    max-width: 210px;
+  }
+  .concept-a .hero-visual {
+    min-height: 575px;
+    margin-top: -105px;
+  }
+  .concept-a .hero h1 {
+    font-size: clamp(42px, 5.2vw, 57px);
+  }
+  .concept-a .program-visual {
+    min-height: 490px;
+  }
+  .concept-a .hero h1 .desktop-break {
+    display: none;
+  }
+  .concept-b .hero {
+    gap: 35px;
+    padding-top: 40px;
+  }
+  .concept-b .hero h1 {
+    font-size: clamp(35px, 4.6vw, 50px);
+  }
+  .concept-b .hero-visual {
+    min-height: 530px;
+  }
+  .concept-b .eyebrow {
+    font-size: 11px;
+  }
+  .concept-b .need-card {
+    gap: 35px;
+  }
+  .concept-b .program {
+    gap: 35px;
+  }
+  .concept-b .program-visual {
+    min-height: 580px;
+  }
+  .concept-b .program h2 {
+    font-size: clamp(33px, 3.8vw, 44px);
+  }
+  .concept-b .program-copy > p {
+    font-size: 21px;
+  }
+  .concept-b .scholarship {
+    padding: 18px;
+    gap: 12px;
+  }
+  .concept-b .scholarship h3 {
+    font-size: 22px;
+  }
+  .concept-b .scholarship p {
+    font-size: 19px;
+  }
+  .concept-b .scholarship > svg {
+    width: 42px;
+    height: 42px;
+  }
+  .concept-c .hero {
+    column-gap: 30px;
+    padding-top: 35px;
+  }
+  .concept-c .hero h1 {
+    font-size: clamp(55px, 7vw, 79px);
+  }
+  .concept-c .hero-visual {
+    min-height: 480px;
+  }
+  .concept-c .intro {
+    font-size: 22px;
+  }
+  .concept-c .needs {
+    gap: 44px;
+  }
+  .concept-c .families {
+    margin-top: 90px;
+  }
+  .concept-c .program {
+    gap: 30px;
+  }
+  .concept-c .program h2 {
+    font-size: clamp(38px, 4.3vw, 48px);
+  }
+  .concept-c .program-visual {
+    min-height: 590px;
+  }
+  .concept-c .scholarship {
+    padding: 20px;
+    gap: 12px;
+  }
+  .concept-c .scholarship h3 {
+    font-size: 23px;
+  }
+  .concept-c .scholarship p {
+    font-size: 20px;
+  }
+  .concept-c .fact h3 {
+    font-size: 20px;
+  }
+  .concept-c .fact p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .concept-review {
+    padding: 12px 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .concept-review > strong {
+    font-size: 12px;
+  }
+  .concept-review > a:first-child {
+    font-size: 11px;
+  }
+  .concept-review nav {
+    margin-left: auto;
+  }
+  .concept-pick {
+    font-size: 12px;
+  }
+  .concept .hero-visual .handwritten {
+    font-size: 22px;
+    max-width: 220px;
+    right: 0;
+    bottom: -5px;
+  }
+  .concept .quote {
+    font-size: 21px;
+    padding: 18px;
+    top: -10px;
+    right: 0;
+  }
+  .concept .connection {
+    height: 90px;
+  }
+  .concept .hero-photo-frame img {
+    object-position: 50% 43%;
+  }
+  .concept .concept-frame {
+    inset: 0;
+  }
+  .concept-a .hero {
+    display: flex;
+    padding-top: 12px;
+  }
+  .concept-a .hero h1 {
+    font-size: 39px;
+  }
+  .concept-a .hero-visual {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1;
+    margin: 24px 0 8px;
+  }
+  .concept-a .intro {
+    font-size: 20px;
+  }
+  .concept-a .needs {
+    padding-top: 26px;
+    gap: 28px;
+  }
+  .concept-a .card-photo {
+    aspect-ratio: 1.5;
+  }
+  .concept-a .card-content {
+    padding: 30px 24px;
+  }
+  .concept-a .card-content h2 {
+    font-size: 28px;
+  }
+  .concept-a .card-content p {
+    font-size: 20px;
+  }
+  .concept-a .program {
+    display: flex;
+  }
+  .concept-a .program h2 {
+    font-size: 35px;
+    width: 100%;
+  }
+  .concept-a .program-copy > p {
+    font-size: 20px;
+  }
+  .concept-a .program-visual {
+    min-height: 0;
+    aspect-ratio: 1;
+    width: 100%;
+    margin: 35px 0 10px;
+  }
+  .concept-b .hero {
+    display: flex;
+    gap: 0;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+  .concept-b .hero-visual {
+    order: 0;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1;
+    margin: 0 0 35px;
+  }
+  .concept-b .hero-copy {
+    order: 1;
+    padding: 0;
+  }
+  .concept-b .hero h1 {
+    font-size: 39px;
+  }
+  .concept-b .intro {
+    font-size: 20px;
+  }
+  .concept-b .eyebrow {
+    font-size: 11px;
+  }
+  .concept-b .hero-visual .handwritten {
+    left: auto;
+    right: 0;
+  }
+  .concept-b .needs {
+    gap: 40px;
+    padding-block: 30px 10px;
+  }
+  .concept-b .need-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .concept-b .card-photo,
+  .concept-b .families .card-photo {
+    width: 100%;
+    aspect-ratio: 1.25;
+    border-radius: 12px 65px 12px 65px;
+  }
+  .concept-b .card-content,
+  .concept-b .families .card-content {
+    padding: 24px 0 0;
+  }
+  .concept-b .round-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+  }
+  .concept-b .card-content h2 {
+    font-size: 32px;
+  }
+  .concept-b .card-content p {
+    font-size: 20px;
+  }
+  .concept-b .program {
+    display: flex;
+    gap: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .concept-b .program-visual {
+    order: 0;
+    min-height: 0;
+    aspect-ratio: 1;
+    width: 100%;
+    margin: 15px 0 30px;
+  }
+  .concept-b .program-copy {
+    order: 1;
+  }
+  .concept-b .program h2 {
+    font-size: 35px;
+  }
+  .concept-b .program-copy > p {
+    font-size: 20px;
+  }
+  .concept-b .scholarship {
+    gap: 13px;
+    padding: 20px 16px;
+  }
+  .concept-b .scholarship h3 {
+    font-size: 22px;
+  }
+  .concept-b .scholarship p {
+    font-size: 18px;
+  }
+  .concept-b .facts {
+    padding-top: 20px;
+  }
+  .concept-b .fact {
+    padding: 20px 10px;
+  }
+  .concept-b .fact:nth-child(2) {
+    border-right: 0;
+  }
+  .concept-b .fact h3 {
+    font-size: 18px;
+  }
+  .concept-c .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding-top: 26px;
+    padding-bottom: 20px;
+  }
+  .concept-c .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+  .concept-c .hero h1 {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 48px;
+    line-height: 1.02;
+    margin-bottom: 20px;
+  }
+  .concept-c .hero h1 .gradient-text {
+    margin-top: 8px;
+  }
+  .concept-c .intro {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 20px;
+    margin: 26px 0 0;
+  }
+  .concept-c .hero-visual {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 10px 0 12px;
+  }
+  .concept-c .hero-visual::before {
+    inset: 20px -5px -10px 10px;
+  }
+  .concept-c .needs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding-top: 28px;
+  }
+  .concept-c .families {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  .concept-c .women {
+    margin-right: 20px;
+  }
+  .concept-c .card-photo {
+    aspect-ratio: 1.2;
+    border-radius: 60px 8px 60px 12px;
+  }
+  .concept-c .families .card-photo {
+    aspect-ratio: 1.2;
+    border-radius: 8px 60px 12px 60px;
+  }
+  .concept-c .card-content {
+    padding-top: 28px;
+  }
+  .concept-c .card-content h2 {
+    font-size: 31px;
+  }
+  .concept-c .card-content p {
+    font-size: 20px;
+  }
+  .concept-c .connection {
+    height: 110px;
+    margin-top: 20px;
+  }
+  .concept-c .program {
+    display: flex;
+    gap: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .concept-c .program h2 {
+    width: 100%;
+    font-size: 39px;
+  }
+  .concept-c .program-copy > p {
+    font-size: 20px;
+  }
+  .concept-c .program-visual {
+    min-height: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 40px 0 12px;
+  }
+  .concept-c .scholarship {
+    width: 100%;
+    padding: 20px 16px;
+    gap: 14px;
+  }
+  .concept-c .scholarship h3 {
+    font-size: 22px;
+  }
+  .concept-c .scholarship p {
+    font-size: 18px;
+  }
+  .concept-c .scholarship > svg {
+    width: 45px;
+    height: 45px;
+  }
+  .concept-c .fact {
+    margin-right: 10px;
+    padding: 22px 8px;
+  }
+  .concept-c .fact h3 {
+    font-size: 18px;
+  }
+  .concept-c .fact p {
+    font-size: 16px;
+  }
+}
+
+.concept-c .hero h1 .gradient-text {
+  text-wrap: balance;
+}
+.concept .concept-layer-photo {
+  position: absolute;
+  width: 32%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 12%;
+  right: -18px;
+  bottom: -22px;
+  border: 7px solid #fffdf8;
+  border-radius: 24px 8px 24px 8px;
+  box-shadow: 0 14px 30px #5e351b15;
+  z-index: 4;
+  clip-path: none;
+}
+@media (max-width: 700px) {
+  .concept .concept-layer-photo {
+    width: 30%;
+    right: -2px;
+    bottom: -16px;
+    border-width: 5px;
+  }
+  .concept-b .hero-visual {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 700px) {
+  .concept-b .hero-visual .handwritten {
+    left: -6px;
+    right: auto;
+    max-width: 220px;
+  }
+}
