@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/design-lab", "destination": "/index.html" },
+    { "source": "/design-lab/", "destination": "/index.html" }
+  ]
+}

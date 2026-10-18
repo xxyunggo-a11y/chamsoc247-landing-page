@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 
@@ -441,4 +441,14 @@ function App() {
     </>
   );
 }
-createRoot(document.getElementById("root")).render(<App />);
+const DesignLab = lazy(() => import("./DesignLab.jsx"));
+const isDesignLab = location.pathname.replace(/\/$/, "") === "/design-lab";
+createRoot(document.getElementById("root")).render(
+  isDesignLab ? (
+    <Suspense fallback={<p role="status">Đang tải thư viện thiết kế…</p>}>
+      <DesignLab />
+    </Suspense>
+  ) : (
+    <App />
+  ),
+);

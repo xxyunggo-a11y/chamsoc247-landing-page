@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="400 0 500 520" fill="none" role="img" aria-labelledby="khung-hero-title">
+  <title id="khung-hero-title">Khung ảnh bất đối xứng 01</title>
+  <metadata>Haikei Blob Scene export; a single original corner contour is isolated and layered as an organic photo frame. Source: sources/01-haikei.svg. Usage terms: https://haikei.app/pricing/.</metadata>
+  <g transform="translate(900, 0)">
+    <path d="M0 486.7C-49.9 450 -99.8 413.3 -164.2 396.3C-228.5 379.4 -307.3 382.3 -344.2 344.2C-381 306 -375.9 226.8 -392.6 162.6C-409.4 98.4 -448.1 49.2 -486.7 0L0 0Z" fill="none" stroke="var(--shape-cream, #fff0df)" stroke-width="38" stroke-linejoin="round" />
+  </g>
+  <g transform="translate(900, 0)">
+    <path d="M0 486.7C-49.9 450 -99.8 413.3 -164.2 396.3C-228.5 379.4 -307.3 382.3 -344.2 344.2C-381 306 -375.9 226.8 -392.6 162.6C-409.4 98.4 -448.1 49.2 -486.7 0L0 0Z" fill="var(--shape-orange, #ff963b)" stroke="var(--shape-orange, #ff963b)" stroke-width="14" stroke-linejoin="round" data-photo-fill="true" />
+  </g>
+  <g transform="translate(900, 0)">
+    <path d="M0 486.7C-49.9 450 -99.8 413.3 -164.2 396.3C-228.5 379.4 -307.3 382.3 -344.2 344.2C-381 306 -375.9 226.8 -392.6 162.6C-409.4 98.4 -448.1 49.2 -486.7 0L0 0Z" fill="none" stroke="var(--shape-pink, #fb4f75)" stroke-width="3" stroke-linejoin="round" />
+  </g>
+</svg>

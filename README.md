@@ -47,3 +47,15 @@ Trang phủ toàn bộ viewport; mỗi phần nội dung có `width: 100%`, gi�
 - Mobile đến 700px: các phần chính xếp dọc, thông tin nhanh chia hai cột.
 
 Đã kiểm tra bản production bằng Chromium tại 1440, 1024, 768 và 390px: chiều rộng container bằng viewport ở cả bốn mức, không tràn ngang, ảnh tải đầy đủ, menu và hộp thông tin hoạt động.
+
+## Design lab — thư viện shape
+
+Mở `/design-lab` để so sánh 6 mẫu SVG độc lập, thử ảnh thật, chỉnh màu, tỷ lệ và lưu lựa chọn trong URL. Trang chính chưa áp dụng các mẫu này. Có nút tải SVG theo màu đã chọn và xem mã nguồn.
+
+- `public/shapes/*.svg`: 6 composition chính và 2 mask ảnh, có CSS variables để đổi màu.
+- `public/shapes/sources/`: bản SVG xuất từ Haikei trước khi phối màu và tinh chỉnh.
+- `public/shapes/manifest.json`: nguồn, generator, vị trí gợi ý của từng mẫu.
+- `public/shapes/README.md`: quyền sử dụng và hướng dẫn tái sử dụng.
+- `vercel.json`: rewrite cho `/design-lab` để mở trực tiếp hoặc tải lại trên Vercel.
+
+Nguồn: Haikei (quyền dùng trong dự án thương mại theo FAQ tại https://haikei.app/pricing/). SVG Backgrounds bị chặn HTTP 403; không sử dụng tài nguyên từ nguồn đó.

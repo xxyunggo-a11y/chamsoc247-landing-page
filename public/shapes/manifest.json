@@ -1,0 +1,80 @@
+[
+  {
+    "id": "S01",
+    "slug": "khung-hero",
+    "title": "Khung hero điêu khắc",
+    "description": "Ảnh hero · Mép cắt góc phải organic, viền phân lớp",
+    "kind": "mask",
+    "source": "Haikei",
+    "generator": "Blob Scene",
+    "sourceUrl": "https://app.haikei.app/?generator=blob-scene",
+    "file": "/shapes/khung-hero.svg",
+    "original": "/shapes/sources/01-haikei.svg",
+    "mask": "/shapes/khung-hero-mask.svg"
+  },
+  {
+    "id": "S02",
+    "slug": "dai-ket-noi",
+    "title": "Dải kết nối nhiều lớp",
+    "description": "Chuyển tiếp giữa hai thẻ nhu cầu và phần kết nối",
+    "kind": "divider",
+    "source": "Haikei",
+    "generator": "Layered Waves",
+    "sourceUrl": "https://app.haikei.app/?generator=layered-waves",
+    "file": "/shapes/dai-ket-noi.svg",
+    "original": "/shapes/sources/02-haikei.svg",
+    "mask": null
+  },
+  {
+    "id": "S03",
+    "slug": "nep-lua",
+    "title": "Nếp lụa bất đối xứng",
+    "description": "Viền ảnh thẻ · Các dải màu tự do xếp lệch",
+    "kind": "divider",
+    "source": "Haikei",
+    "generator": "Stacked Waves",
+    "sourceUrl": "https://app.haikei.app/?generator=stacked-waves",
+    "file": "/shapes/nep-lua.svg",
+    "original": "/shapes/sources/03-haikei.svg",
+    "mask": null
+  },
+  {
+    "id": "S04",
+    "slug": "khung-ket-noi",
+    "title": "Khung ảnh ôm nét",
+    "description": "Ảnh kết nối · Contour góc trái ôm ảnh, viền nhiều tầng",
+    "kind": "mask",
+    "source": "Haikei",
+    "generator": "Blob Scene",
+    "sourceUrl": "https://app.haikei.app/?generator=blob-scene",
+    "file": "/shapes/khung-ket-noi.svg",
+    "original": "/shapes/sources/04-haikei.svg",
+    "mask": "/shapes/khung-ket-noi-mask.svg"
+  },
+  {
+    "id": "S05",
+    "slug": "rem-hero",
+    "title": "Rèm cạnh tự do",
+    "description": "Biên phải hero · Các mặt cắt organic chồng lớp",
+    "kind": "edge",
+    "source": "Haikei",
+    "generator": "Layered Waves",
+    "sourceUrl": "https://app.haikei.app/?generator=layered-waves",
+    "file": "/shapes/rem-hero.svg",
+    "original": "/shapes/sources/05-haikei.svg",
+    "mask": null
+  },
+  {
+    "id": "S06",
+    "slug": "song-chuyen-sac",
+    "title": "Dòng chảy chuyển sắc",
+    "description": "Chân Block 1 · Nhiều dải tự do, không lặp hình sin",
+    "kind": "divider",
+    "source": "Haikei",
+    "generator": "Stacked Waves",
+    "sourceUrl": "https://app.haikei.app/?generator=stacked-waves",
+    "file": "/shapes/song-chuyen-sac.svg",
+    "original": "/shapes/sources/06-haikei.svg",
+    "mask": null
+  }
+]
