@@ -190,7 +190,8 @@ export default function CreativeComparison() {
               : "Chưa chọn phương án cuối cùng"}
           </strong>
           <p>
-            Lựa chọn chỉ được lưu trong đường dẫn; website chính vẫn giữ nguyên.
+            Lựa chọn so sánh được lưu trong đường dẫn. Trang chính đang dùng
+            phương án A.
           </p>
         </div>
         <button onClick={() => change({ choice: active })}>

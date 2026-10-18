@@ -1,71 +1,43 @@
 import React, { useEffect, useRef, useState } from "react";
 
+import {
+  UserRoundCheck,
+  HouseHeart,
+  BookOpen,
+  GraduationCap,
+  CalendarDays,
+  Laptop,
+  UsersRound,
+  MapPin,
+  ChevronRight,
+  Menu,
+  X,
+} from "lucide-react";
+const iconComponents = {
+  person: UserRoundCheck,
+  home: HouseHeart,
+  book: BookOpen,
+  cap: GraduationCap,
+  calendar: CalendarDays,
+  laptop: Laptop,
+  group: UsersRound,
+  pin: MapPin,
+  arrow: ChevronRight,
+  menu: Menu,
+  close: X,
+};
 function Icon({ name, className = "" }) {
-  const paths = {
-    person: (
-      <>
-        <circle cx="12" cy="7" r="4" />
-        <path d="M5 22v-3a7 7 0 0 1 14 0v3M8 16h8" />
-      </>
-    ),
-    home: (
-      <>
-        <path d="m2 11 10-9 10 9M5 9v13h5v-8h4v8h5V9" />
-      </>
-    ),
-    book: (
-      <>
-        <path d="M12 5v17M12 5Q6 1 2 4v16q5-3 10 2 5-5 10-2V4q-4-3-10 1Z" />
-      </>
-    ),
-    cap: (
-      <>
-        <path d="m1 8 11-6 11 6-11 6L1 8Zm4 3v7q7 7 14 0v-7M23 8v10" />
-      </>
-    ),
-    calendar: (
-      <>
-        <rect x="3" y="5" width="18" height="17" rx="2" />
-        <path d="M7 2v6m10-6v6M3 11h18m-13 4-2 2 2 2m8-4 2 2-2 2" />
-      </>
-    ),
-    laptop: (
-      <>
-        <rect x="4" y="3" width="16" height="13" rx="1" />
-        <path d="M1 20h22M8 17l-1 3m9-3 1 3" />
-      </>
-    ),
-    group: (
-      <>
-        <circle cx="12" cy="6" r="3" />
-        <path d="M6 22v-6a6 6 0 0 1 12 0v6M3 9a3 3 0 0 0 0 6m18-6a3 3 0 0 1 0 6M1 22v-4m22 4v-4" />
-      </>
-    ),
-    pin: (
-      <>
-        <path d="M20 9c0 6-8 14-8 14S4 15 4 9a8 8 0 0 1 16 0Z" />
-        <circle cx="12" cy="9" r="2.5" />
-      </>
-    ),
-    arrow: <path d="m9 3 9 9-9 9" />,
-    menu: <path d="M2 5h20M2 12h20M2 19h20" />,
-    close: <path d="m5 5 14 14M19 5 5 19" />,
-  };
+  const Component = iconComponents[name];
   return (
-    <svg
+    <Component
       className={className}
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
+      size={28}
+      strokeWidth={1.75}
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-    >
-      {paths[name]}
-    </svg>
+      focusable="false"
+    />
   );
 }
 // Logo và ảnh do ChămSóc247 cung cấp; xem public/images/danh-muc.json.

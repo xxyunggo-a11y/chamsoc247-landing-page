@@ -36,3 +36,7 @@ Phát triển từ hướng contour S01/S04 và nhịp nhiều lớp S02/S03 đ�
 ## Kiểm tra
 
 Kiểm tra Chromium production ở 1440, 1024, 768 và 390px cho từng phương án; chụp toàn trang cả ba phương án ở desktop và mobile. So sánh toàn bộ nội dung sau khi chuẩn hóa khoảng trắng; kiểm tra ảnh tải đủ, không tràn ngang hoặc tràn chữ, CTA mở và đóng hộp thông tin. Kiểm tra chuyển A/B/C, desktop/mobile, lưu lựa chọn sau tải lại, đường dẫn nguồn SVG và trang chính không bị áp dụng concept.
+
+## Phương án đã chọn
+
+Người dùng đã chọn A. Trang chính hiện dùng A với Be Vietnam Pro, Patrick Hand và icon Lucide. B/C giữ để tham khảo trong design lab; không tự áp dụng lựa chọn khác chỉ bằng cách bấm nút so sánh.

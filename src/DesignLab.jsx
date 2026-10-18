@@ -112,7 +112,7 @@ export default function DesignLab() {
             chọn hướng thiết kế trước khi áp dụng.
           </p>
         </div>
-        <span className="lab-status">Block 1 được giữ nguyên</span>
+        <span className="lab-status">Trang chính · Phương án A</span>
       </header>
       <CreativeComparison />
       <h2 id="shape-library" className="lab-shape-title">

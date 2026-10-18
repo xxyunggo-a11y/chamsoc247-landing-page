@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import BlockOne from "./BlockOne.jsx";
 import "./creative-concepts.css";
+import "./concept-a-refinement.css";
 export const concepts = [
   {
     id: "a",
