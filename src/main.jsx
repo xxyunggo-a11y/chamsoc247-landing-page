@@ -204,7 +204,16 @@ function App() {
               </p>
             </div>
             <div className="hero-visual">
-              <div className="hero-photo-frame" aria-hidden="true" />
+              <div className="hero-photo-frame">
+                <img
+                  src="/images/hero-care.webp"
+                  alt="Hộ lý ChămSóc247 hỗ trợ người cao tuổi uống nước tại nhà"
+                  width="1254"
+                  height="1254"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </div>
               <div className="handwritten">
                 Chăm sóc <span>♡</span>
                 <br />
@@ -225,7 +234,16 @@ function App() {
             aria-label="Hai nhu cầu, một sự kết nối"
           >
             <article className="need-card women">
-              <div className="card-photo" aria-hidden="true"></div>
+              <div className="card-photo">
+                <img
+                  src="/images/caregiver-opportunity.webp"
+                  alt="Hộ lý ChămSóc247 đồng hành cùng người cao tuổi tại gia đình"
+                  width="1440"
+                  height="1080"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <div className="card-content">
                 <span className="round-icon">
                   <Icon name="person" />
@@ -239,7 +257,16 @@ function App() {
               </div>
             </article>
             <article className="need-card families">
-              <div className="card-photo" aria-hidden="true"></div>
+              <div className="card-photo">
+                <img
+                  src="/images/family-care.webp"
+                  alt="Hộ lý đo huyết áp và theo dõi sức khỏe cho người cao tuổi tại nhà"
+                  width="1440"
+                  height="1080"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <div className="card-content">
                 <span className="round-icon">
                   <Icon name="home" />
@@ -303,7 +330,16 @@ function App() {
               </div>
             </div>
             <div className="program-visual">
-              <div className="photo-orbit" aria-hidden="true"></div>
+              <div className="photo-orbit">
+                <img
+                  src="/images/care-connection.webp"
+                  alt="Hộ lý chăm sóc vai cho người cao tuổi trong không gian gia đình"
+                  width="1222"
+                  height="1287"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p className="quote handwritten">
                 Nghề hộ lý
                 <br />
@@ -346,7 +382,8 @@ function App() {
             ))}
           </section>
           <p className="draft-note">
-            Bản xem trước Block 1 · Đang chờ ảnh chụp thật và logo chính thức.
+            Bản xem trước Block 1 · Sử dụng ảnh do ChămSóc247 cung cấp. Logo
+            chính thức sẽ được cập nhật sau.
           </p>
         </main>
         <svg
