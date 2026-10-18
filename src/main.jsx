@@ -78,12 +78,13 @@ function Brand() {
       className="brand"
       aria-label="ChămSóc247 — về đầu trang"
     >
-      <span>
-        <strong>
-          ChămSóc<span>247</span>
-        </strong>
-        <small>Học hôm nay, chăm sóc ngày mai</small>
-      </span>
+      <img
+        className="brand-logo"
+        src="/images/chamsoc247-logo.webp"
+        alt="ChămSóc247 — Đồng hành từng khoảnh khắc"
+        width="800"
+        height="600"
+      />
     </a>
   );
 }
@@ -148,10 +149,14 @@ function App() {
           <span className="partner-divider" aria-hidden="true">
             ×
           </span>
-          <div
-            className="partner"
-            aria-label="Đại học Y Hà Nội — vị trí logo chờ thay thế"
-          >
+          <div className="partner" aria-label="Đại học Y Hà Nội">
+            <img
+              className="university-logo"
+              src="/images/hanoi-medical-university-logo.webp"
+              alt="Biểu trưng Trường Đại học Y Hà Nội"
+              width="100"
+              height="123"
+            />
             <span>
               <strong>ĐẠI HỌC Y HÀ NỘI</strong>
               <small>HANOI MEDICAL UNIVERSITY</small>

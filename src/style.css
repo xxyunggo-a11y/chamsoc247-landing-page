@@ -1381,3 +1381,80 @@ html {
     object-position: 50% 35%;
   }
 }
+
+.brand-logo {
+  display: block;
+  width: 205px;
+  height: 104px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.university-logo {
+  display: block;
+  width: 64px;
+  height: 79px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.header {
+  padding-block: 16px;
+}
+.hero-visual {
+  top: -132px;
+  height: calc(100% + 122px);
+}
+@media (max-width: 700px) {
+  .brand-logo {
+    width: 150px;
+    height: 76px;
+  }
+  .partner {
+    width: auto;
+    order: 0;
+    gap: 8px;
+  }
+  .partner-divider {
+    display: none;
+  }
+  .university-logo {
+    width: 35px;
+    height: 44px;
+  }
+  .partner strong {
+    font-size: 10px;
+    white-space: normal;
+  }
+  .partner small {
+    font-size: 6px;
+  }
+  .partner span {
+    max-width: 100px;
+  }
+  .header {
+    gap: 10px;
+  }
+  .menu-button {
+    width: 42px;
+    height: 42px;
+  }
+  .hero-visual {
+    top: auto;
+    height: auto;
+  }
+  .navigation {
+    top: 95px;
+  }
+}
+@media (max-width: 400px) {
+  .brand-logo {
+    width: 130px;
+    height: 70px;
+  }
+  .partner span {
+    display: none;
+  }
+  .header {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+}

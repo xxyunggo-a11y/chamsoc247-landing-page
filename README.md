@@ -24,7 +24,7 @@ npm run preview -- --port 4173
 - `src/style.css`: màu sắc, bố cục responsive, wave và shape.
 - `public/images/`: thư mục dành cho ảnh thật và logo chính thức khi được cung cấp.
 
-Đã bỏ hình minh họa người và logo tự dựng. Block 1 sử dụng 4 ảnh được cung cấp trên GitHub, chuyển sang WebP trong `public/images/` để tối ưu dung lượng; bản gốc được giữ nguyên. Tên thương hiệu hiển thị bằng chữ trong khi chờ file logo chính thức. Nội dung chương trình được chép theo ảnh tham chiếu. Các nút đăng ký và tìm hiểu mở hộp thông tin; chưa kết nối dịch vụ đăng ký và chưa thu thập dữ liệu.
+Đã bỏ hình minh họa người và logo tự dựng. Block 1 sử dụng 4 ảnh được cung cấp trên GitHub, chuyển sang WebP trong `public/images/` để tối ưu dung lượng; bản gốc được giữ nguyên. Header sử dụng hai file logo mới được cung cấp, tối ưu WebP và giữ nguyên tỷ lệ. Nội dung chương trình được chép theo ảnh tham chiếu. Các nút đăng ký và tìm hiểu mở hộp thông tin; chưa kết nối dịch vụ đăng ký và chưa thu thập dữ liệu.
 
 ## Triển khai Vercel bằng trình duyệt
 
