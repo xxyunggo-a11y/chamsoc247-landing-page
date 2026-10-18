@@ -70,7 +70,7 @@ function Icon({ name, className = "" }) {
     </svg>
   );
 }
-// Official logo assets will be inserted after the user supplies the files.
+// Logo và ảnh do ChămSóc247 cung cấp; xem public/images/danh-muc.json.
 function Brand() {
   return (
     <a
@@ -80,7 +80,7 @@ function Brand() {
     >
       <img
         className="brand-logo"
-        src="/images/chamsoc247-logo.webp"
+        src="/images/logo-chamsoc247.webp"
         alt="ChămSóc247 — Đồng hành từng khoảnh khắc"
         width="800"
         height="600"
@@ -152,7 +152,7 @@ function App() {
           <div className="partner" aria-label="Đại học Y Hà Nội">
             <img
               className="university-logo"
-              src="/images/hanoi-medical-university-logo.webp"
+              src="/images/logo-dai-hoc-y.webp"
               alt="Biểu trưng Trường Đại học Y Hà Nội"
               width="100"
               height="123"
@@ -211,7 +211,9 @@ function App() {
             <div className="hero-visual">
               <div className="hero-photo-frame">
                 <img
-                  src="/images/hero-care.webp"
+                  src="/images/cham-soc-tan-tam.webp"
+                  srcSet="/images/cham-soc-tan-tam-720.webp 720w, /images/cham-soc-tan-tam.webp 1254w"
+                  sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 48vw, 690px"
                   alt="Hộ lý ChămSóc247 hỗ trợ người cao tuổi uống nước tại nhà"
                   width="1254"
                   height="1254"
@@ -241,7 +243,9 @@ function App() {
             <article className="need-card women">
               <div className="card-photo">
                 <img
-                  src="/images/caregiver-opportunity.webp"
+                  src="/images/ho-ly-dong-hanh.webp"
+                  srcSet="/images/ho-ly-dong-hanh-720.webp 720w, /images/ho-ly-dong-hanh.webp 1440w"
+                  sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 48vw, 690px"
                   alt="Hộ lý ChămSóc247 đồng hành cùng người cao tuổi tại gia đình"
                   width="1440"
                   height="1080"
@@ -264,7 +268,9 @@ function App() {
             <article className="need-card families">
               <div className="card-photo">
                 <img
-                  src="/images/family-care.webp"
+                  src="/images/do-huyet-ap.webp"
+                  srcSet="/images/do-huyet-ap-720.webp 720w, /images/do-huyet-ap.webp 1440w"
+                  sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 48vw, 690px"
                   alt="Hộ lý đo huyết áp và theo dõi sức khỏe cho người cao tuổi tại nhà"
                   width="1440"
                   height="1080"
@@ -337,7 +343,9 @@ function App() {
             <div className="program-visual">
               <div className="photo-orbit">
                 <img
-                  src="/images/care-connection.webp"
+                  src="/images/cham-soc-vai.webp"
+                  srcSet="/images/cham-soc-vai-720.webp 684w, /images/cham-soc-vai.webp 1222w"
+                  sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 48vw, 690px"
                   alt="Hộ lý chăm sóc vai cho người cao tuổi trong không gian gia đình"
                   width="1222"
                   height="1287"
